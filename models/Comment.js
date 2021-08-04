@@ -5,16 +5,21 @@ class Comment extends Model {}
 
 Comment.init(
     {
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+          },
         comment_body:{
             type: DataTypes.STRING,
-            primaryKey: true,
             allowNull: false,
         },
         post_title:{
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             references:{
                 model:'post',
-                key:'title'
+                key:'id'
             },
         },
         user_id:{
