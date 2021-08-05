@@ -1,0 +1,21 @@
+  
+<section class="container">
+  <h2 class="header text-center">All Posts</h2>
+  <section class="flex-row row justify-content-center">
+    {{#each posts}}
+    <section class="col-lg-6">
+  <div class="card my-4 bg-dark">
+    <a href="/post/{{id}}">
+      <header class="ps-4 card-header bg-success">Post:
+        {{title}}
+        by
+        {{user.username}}
+       
+       </header>
+      <p class="ps-4 card-body">{{body}}</p>
+    </a>
+  </div>
+</section>
+    {{/each}}
+  </section>
+</section>
